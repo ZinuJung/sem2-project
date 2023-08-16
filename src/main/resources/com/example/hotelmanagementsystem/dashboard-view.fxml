@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controllers.DashboardController">
+    <children>
+        <StackPane layoutX="165.0" layoutY="75.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <BorderPane layoutX="135.0" layoutY="77.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <left>
+                                <AnchorPane prefHeight="550.0" prefWidth="215.0" BorderPane.alignment="CENTER">
+                                    <children>
+                                        <AnchorPane layoutX="8.0" layoutY="-1.0" prefHeight="551.0" prefWidth="215.0" styleClass="nav-form" stylesheets="@../css/dashboard.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
+                                            <children>
+                                                <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="70.0" layoutY="96.0" size="8em" />
+                                                <Label layoutX="71.0" layoutY="110.0" text="Welcome," textFill="WHITE">
+                                                    <font>
+                                                        <Font name="Tahoma" size="17.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label fx:id="lbUsername" alignment="CENTER" layoutX="1.0" layoutY="131.0" prefHeight="23.0" prefWidth="213.0" text="Label" textFill="#2bd75b">
+                                                    <font>
+                                                        <Font name="Arial Bold" size="20.0" />
+                                                    </font>
+                                                </Label>
+                                                <Line endX="100.0" layoutX="108.0" layoutY="154.0" startX="-100.0" stroke="WHITE" />
+                                                <Button fx:id="btnDashboard" layoutX="8.0" layoutY="191.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="200.0" styleClass="nav-btn" text="Dashboard" textFill="WHITE">
+                                                    <graphic>
+                                                        <FontAwesomeIcon fill="WHITE" glyphName="DASHBOARD" size="1.2em" />
+                                                    </graphic>
+                                                </Button>
+                                                <Button fx:id="btnRooms" layoutX="8.0" layoutY="226.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="200.0" styleClass="nav-btn" text="Rooms" textFill="WHITE">
+                                                    <graphic>
+                                                        <FontAwesomeIcon fill="WHITE" glyphName="CHECK_CIRCLE" size="1.2em" />
+                                                    </graphic>
+                                                </Button>
+                                                <Button fx:id="btnCustomers" layoutX="8.0" layoutY="261.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="200.0" styleClass="nav-btn" text="Customers" textFill="WHITE">
+                                                    <graphic>
+                                                        <FontAwesomeIcon fill="WHITE" glyphName="USERS" size="1.2em" />
+                                                    </graphic>
+                                                </Button>
+                                                <Button fx:id="btnLogout" layoutX="31.0" layoutY="498.0" mnemonicParsing="false" onAction="#logout" styleClass="logout-btn">
+                                                    <graphic>
+                                                        <FontAwesomeIcon fill="WHITE" glyphName="SIGN_OUT" size="2em" />
+                                                    </graphic>
+                                                </Button>
+                                                <Label layoutX="77.0" layoutY="504.0" text="Sign Out" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="Tahoma" size="16.0" />
+                                                    </font>
+                                                </Label>
+                                    <Button fx:id="btnBookings" layoutX="9.0" layoutY="296.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="200.0" styleClass="nav-btn" text="Bookings" textFill="WHITE">
+                                       <graphic>
+                                          <FontAwesomeIcon fill="WHITE" glyphName="HOTEL" size="1.2em" />
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="btnServices" layoutX="10.0" layoutY="331.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="200.0" styleClass="nav-btn" text="Services" textFill="WHITE">
+                                       <graphic>
+                                          <FontAwesomeIcon fill="WHITE" glyphName="BELL" size="1.2em" />
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="btnInvoice" layoutX="10.0" layoutY="366.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="35.0" prefWidth="200.0" styleClass="nav-btn" text="Invoices" textFill="WHITE">
+                                       <graphic>
+                                          <FontAwesomeIcon fill="WHITE" glyphName="FILE" size="1.2em" />
+                                       </graphic>
+                                    </Button>
+                                            </children>
+                                        </AnchorPane>
+                                    </children>
+                                </AnchorPane>
+                            </left>
+                            <center>
+                                <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                    <children>
+                                        <AnchorPane fx:id="dashboardForm" layoutX="198.0" layoutY="98.0" prefHeight="550.0" prefWidth="885.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-6.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <children>
+                                                <AnchorPane layoutX="18.0" layoutY="31.0" prefHeight="143.0" prefWidth="860.0" stylesheets="@../css/dashboard.css">
+                                                    <styleClass>
+                                                        <String fx:value="shadow" />
+                                                        <String fx:value="white-bg" />
+                                                    </styleClass>
+                                                    <children>
+                                                        <AnchorPane layoutX="14.0" layoutY="5.0" prefHeight="135.0" prefWidth="250.0" styleClass="card">
+                                                            <children>
+                                                                <FontAwesomeIcon fill="WHITE" glyphName="CHECK" layoutX="14.0" layoutY="90.0" size="5em" />
+                                                                <Label layoutX="96.0" layoutY="86.0" text="Today's Book" textFill="WHITE">
+                                                                    <font>
+                                                                        <Font name="Tahoma" size="20.0" />
+                                                                    </font>
+                                                                </Label>
+                                                                <Label fx:id="lbTodayBook" layoutX="221.0" layoutY="24.0" text="0" textFill="WHITE">
+                                                                    <font>
+                                                                        <Font name="Berlin Sans FB" size="25.0" />
+                                                                    </font>
+                                                                </Label>
+                                                            </children>
+                                                        </AnchorPane>
+                                                        <AnchorPane layoutX="596.0" layoutY="5.0" prefHeight="135.0" prefWidth="250.0" styleClass="card">
+                                                            <children>
+                                                                <FontAwesomeIcon fill="WHITE" glyphName="DOLLAR" layoutX="26.0" layoutY="90.0" size="5em" />
+                                                                <Label layoutX="87.0" layoutY="86.0" text="Total Income" textFill="WHITE">
+                                                                    <font>
+                                                                        <Font name="Tahoma" size="20.0" />
+                                                                    </font>
+                                                                </Label>
+                                                                <Label fx:id="lbTotalIncome" layoutX="190.0" layoutY="24.0" text="\$0.0" textFill="WHITE">
+                                                                    <font>
+                                                                        <Font name="Berlin Sans FB" size="25.0" />
+                                                                    </font>
+                                                                </Label>
+                                                            </children>
+                                                        </AnchorPane>
+                                                        <AnchorPane layoutX="305.0" layoutY="5.0" prefHeight="135.0" prefWidth="250.0" styleClass="card">
+                                                            <children>
+                                                                <FontAwesomeIcon fill="WHITE" glyphName="DOLLAR" layoutX="28.0" layoutY="88.0" size="5em" />
+                                                                <Label layoutX="89.0" layoutY="84.0" text="Today's Income" textFill="WHITE">
+                                                                    <font>
+                                                                        <Font name="Tahoma" size="20.0" />
+                                                                    </font>
+                                                                </Label>
+                                                                <Label fx:id="lbTodayIncome" layoutX="192.0" layoutY="22.0" text="\$0.0" textFill="WHITE">
+                                                                    <font>
+                                                                        <Font name="Berlin Sans FB" size="25.0" />
+                                                                    </font>
+                                                                </Label>
+                                                            </children>
+                                                        </AnchorPane>
+                                                    </children>
+                                                </AnchorPane>
+                                                <AnchorPane layoutX="18.0" layoutY="206.0" prefHeight="380.0" prefWidth="860.0" stylesheets="@../css/dashboard.css">
+                                                    <styleClass>
+                                                        <String fx:value="shadow" />
+                                                        <String fx:value="white-bg" />
+                                                    </styleClass>
+                                                    <children>
+                                                        <AreaChart fx:id="areaChartDataIncome" layoutX="15.0" layoutY="5.0" prefHeight="370.0" prefWidth="830.0" title="Data Income">
+                                                            <xAxis>
+                                                                <CategoryAxis side="BOTTOM" />
+                                                            </xAxis>
+                                                            <yAxis>
+                                                                <NumberAxis side="LEFT" />
+                                                            </yAxis>
+                                                        </AreaChart>
+                                                    </children>
+                                                </AnchorPane>
+                                            </children>
+                                        </AnchorPane>
+                                        <AnchorPane fx:id="roomsForm" layoutX="21.0" layoutY="21.0" prefHeight="550.0" prefWidth="885.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <children>
+                                                <AnchorPane layoutX="14.0" layoutY="40.0" prefHeight="520.0" prefWidth="250.0" stylesheets="@../css/dashboard.css">
+                                                    <styleClass>
+                                                        <String fx:value="shadow" />
+                                                        <String fx:value="white-bg" />
+                                                    </styleClass>
+                                                    <children>
+                                                        <TextField fx:id="txtRoomNumber" layoutX="90.0" layoutY="103.0" prefHeight="30.0" prefWidth="150.0" styleClass="textfield" />
+                                                        <Label layoutX="31.0" layoutY="108.0" text="Room #:" AnchorPane.leftAnchor="31.0">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label layoutX="10.0" layoutY="152.0" text="Room Type:" AnchorPane.leftAnchor="10.0">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <ComboBox fx:id="cbBoxRoomType" layoutX="90.0" layoutY="147.0" prefHeight="30.0" prefWidth="150.0" promptText="Choose" styleClass="combo-box" />
+                                                        <TextField fx:id="txtPrice" layoutX="90.0" layoutY="192.0" prefHeight="30.0" prefWidth="150.0" styleClass="textfield" />
+                                                        <Label layoutX="51.0" layoutY="197.0" text="Price:" AnchorPane.leftAnchor="51.0">
+                                                            <font>
+                                                                <Font size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Button fx:id="btnAdd" layoutX="24.0" layoutY="320.0" mnemonicParsing="false" onAction="#addRoom" prefHeight="40.0" prefWidth="80.0" styleClass="add-btn" text="Add" />
+                                                        <Button fx:id="btnUpdate" layoutX="147.0" layoutY="320.0" mnemonicParsing="false" onAction="#updateRoom" prefHeight="40.0" prefWidth="80.0" styleClass="update-btn" text="Update" />
+                                                        <Button fx:id="btnClear" layoutX="24.0" layoutY="387.0" mnemonicParsing="false" onAction="#clear" prefHeight="40.0" prefWidth="80.0" styleClass="clear-btn" text="Clear" />
+                                                        <Button fx:id="btnDelete" layoutX="147.0" layoutY="387.0" mnemonicParsing="false" onAction="#deleteRoom" prefHeight="40.0" prefWidth="80.0" styleClass="delete-btn" text="Delete" />
+                                          <Label layoutX="68.0" layoutY="70.0" text="Id:">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lbId" layoutX="91.0" layoutY="71.0" />
+                                                    </children>
+                                                </AnchorPane>
+                                                <AnchorPane layoutX="281.0" layoutY="40.0" prefHeight="520.0" prefWidth="590.0" stylesheets="@../css/dashboard.css">
+                                                    <styleClass>
+                                                        <String fx:value="shadow" />
+                                                        <String fx:value="white-bg" />
+                                                    </styleClass>
+                                                    <children>
+                                                        <TableView fx:id="tableViewRooms" layoutX="10.0" layoutY="46.0" onMouseClicked="#selectRoom" prefHeight="460.0" prefWidth="570.0">
+                                                            <columns>
+                                                                <TableColumn fx:id="colRoomId" prefWidth="110.0" text="Id" />
+                                                                <TableColumn fx:id="colRoomNumber" prefWidth="140.0" text="Room #" />
+                                                                <TableColumn fx:id="colRoomType" prefWidth="160.0" text="Room Type" />
+                                                <TableColumn fx:id="colPrice" prefWidth="159.0" text="Price ($)" />
+                                                            </columns>
+                                                        </TableView>
+                                                        <TextField fx:id="txtRoomSearch" layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="235.0" promptText="Search" styleClass="search" />
+                                                        <FontAwesomeIcon fill="#2f3f89" glyphName="SEARCH" layoutX="20.0" layoutY="31.0" size="1.5em" />
+                                                    </children>
+                                                </AnchorPane>
+                                            </children>
+                                        </AnchorPane>
+                              <AnchorPane fx:id="customersForm" layoutX="10.0" layoutY="10.0" prefHeight="550.0" prefWidth="885.0" visible="false" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <AnchorPane layoutX="14.0" layoutY="40.0" prefHeight="520.0" prefWidth="250.0" stylesheets="@../css/dashboard.css">
+                                       <styleClass>
+                                          <String fx:value="shadow" />
+                                          <String fx:value="white-bg" />
+                                       </styleClass>
+                                       <children>
+                                          <TextField fx:id="txtFullName" layoutX="87.0" layoutY="82.0" prefHeight="30.0" prefWidth="150.0" styleClass="textfield" />
+                                          <Label layoutX="14.0" layoutY="87.0" text="Full Name:">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="30.0" layoutY="147.0" text="Identity:" AnchorPane.leftAnchor="30.0">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="txtContact" layoutX="87.0" layoutY="205.0" prefHeight="30.0" prefWidth="150.0" styleClass="textfield" />
+                                          <Label layoutX="30.0" layoutY="210.0" text="Contact:">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Button fx:id="btnAddCustomer" layoutX="24.0" layoutY="301.0" mnemonicParsing="false" onAction="#addCustomer" prefHeight="40.0" prefWidth="80.0" styleClass="add-btn" text="Add" />
+                                          <Button fx:id="btnUpdateCustomer" layoutX="147.0" layoutY="301.0" mnemonicParsing="false" onAction="#updateCustomer" prefHeight="40.0" prefWidth="80.0" styleClass="update-btn" text="Update" />
+                                          <Button fx:id="btnClearCustomer" layoutX="85.0" layoutY="370.0" mnemonicParsing="false" onAction="#clearCustomerForm" prefHeight="40.0" prefWidth="80.0" styleClass="clear-btn" text="Clear" />
+                                          <Button fx:id="btnCheckIn" layoutX="24.0" layoutY="466.0" mnemonicParsing="false" onAction="#confirm" prefHeight="40.0" prefWidth="80.0" styleClass="check-in-btn" text="Check-In" />
+                                          <TextField fx:id="txtIdentity" layoutX="87.0" layoutY="142.0" prefHeight="30.0" prefWidth="150.0" styleClass="textfield" />
+                                          <Label fx:id="lbCustomerId" layoutX="91.0" layoutY="44.0" />
+                                          <Label layoutX="67.0" layoutY="42.0" text="Id:" AnchorPane.leftAnchor="67.0">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Button fx:id="btnCheckIn1" layoutX="146.0" layoutY="466.0" mnemonicParsing="false" onAction="#checkout" prefHeight="40.0" prefWidth="81.0" styleClass="check-out-btn" text="Check-out" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="281.0" layoutY="40.0" prefHeight="520.0" prefWidth="590.0" stylesheets="@../css/dashboard.css">
+                                       <styleClass>
+                                          <String fx:value="shadow" />
+                                          <String fx:value="white-bg" />
+                                       </styleClass>
+                                       <children>
+                                          <TextField fx:id="txtSearchCustomer" layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="235.0" promptText="Search" styleClass="search" />
+                                          <TableView fx:id="tableViewCustomers" layoutX="10.0" layoutY="46.0" onMouseClicked="#selectCustomer" prefHeight="460.0" prefWidth="570.0">
+                                             <columns>
+                                                <TableColumn fx:id="colCustomerId" prefWidth="60.0" text="Id" />
+                                                <TableColumn fx:id="colFullName" prefWidth="180.0" text="Full Name" />
+                                                <TableColumn fx:id="colIdentity" prefWidth="180.0" text="Identity Number" />
+                                                <TableColumn fx:id="colContact" prefWidth="149.0" text="Contact Number" />
+                                             </columns>
+                                          </TableView>
+                                          <FontAwesomeIcon fill="#2f3f89" glyphName="SEARCH" layoutX="20.0" layoutY="31.0" size="1.5em" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="checkinForm" prefHeight="520.0" prefWidth="430.0" stylesheets="@../css/dashboard.css" visible="false" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="40.0">
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <Label layoutX="74.0" layoutY="17.0" text="Check-in">
+                                             <font>
+                                                <Font name="Berlin Sans FB" size="25.0" />
+                                             </font>
+                                          </Label>
+                                          <FontAwesomeIcon fill="#2f3f89" glyphName="KEY" layoutX="29.0" layoutY="44.0" size="3em" />
+                                          <Label layoutX="248.0" layoutY="22.0" text="Customer #:">
+                                             <font>
+                                                <Font name="Tahoma" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lbConfirmId" layoutX="339.0" layoutY="21.0" prefHeight="21.0" prefWidth="15.0">
+                                             <font>
+                                                <Font name="Arial" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="82.0" layoutY="71.0" text="Full Name" />
+                                          <TextField fx:id="txtConfirmName" layoutX="29.0" layoutY="97.0" prefHeight="30.0" prefWidth="160.0" styleClass="textfield" />
+                                          <Label layoutX="277.0" layoutY="71.0" text="Identity Number" />
+                                          <TextField fx:id="txtConfirmIdentity" layoutX="241.0" layoutY="97.0" prefHeight="30.0" prefWidth="160.0" styleClass="textfield" />
+                                          <Label layoutX="171.0" layoutY="160.0" text="Contact Number" />
+                                          <TextField fx:id="txtConfirmContact" layoutX="135.0" layoutY="185.0" prefHeight="30.0" prefWidth="160.0" styleClass="textfield" />
+                                          <Label layoutX="74.0" layoutY="354.0" text="Check-in Date" />
+                                          <Label layoutX="282.0" layoutY="354.0" text="Check-out Date" />
+                                          <DatePicker fx:id="dpCheckin" layoutX="31.0" layoutY="393.0" prefHeight="30.0" prefWidth="160.0" promptText="MM-DD-YYYY" styleClass="combo-box" />
+                                          <DatePicker fx:id="dpCheckout" layoutX="239.0" layoutY="393.0" prefHeight="30.0" prefWidth="160.0" promptText="MM-DD-YYYY" styleClass="combo-box" />
+                                          <Button fx:id="btnCancel" layoutX="56.0" layoutY="466.0" mnemonicParsing="false" onAction="#cancel" prefHeight="40.0" prefWidth="110.0" styleClass="delete-btn" text="Cancel" />
+                                          <Button fx:id="btnCheckin1" layoutX="264.0" layoutY="466.0" mnemonicParsing="false" onAction="#checkin" prefHeight="40.0" prefWidth="110.0" styleClass="check-in-btn" text="Check-In" />
+                                          <Label layoutX="79.0" layoutY="260.0" text="Room Type" />
+                                          <Label layoutX="297.0" layoutY="260.0" text="Room #" />
+                                          <ComboBox fx:id="cbBoxRoomType1" layoutX="32.0" layoutY="285.0" onAction="#availableRoomType" prefHeight="30.0" prefWidth="160.0" promptText="Choose" styleClass="combo-box" />
+                                          <ComboBox fx:id="cbBoxRoomNumber" layoutX="238.0" layoutY="285.0" onAction="#availableRoomNumber" prefHeight="30.0" prefWidth="160.0" promptText="Choose" styleClass="combo-box" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="checkoutForm" layoutX="17.0" layoutY="50.0" prefHeight="520.0" prefWidth="855.0" stylesheets="@../css/dashboard.css" visible="false" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="40.0">
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <Label layoutX="74.0" layoutY="17.0" text="Check-out">
+                                             <font>
+                                                <Font name="Berlin Sans FB" size="25.0" />
+                                             </font>
+                                          </Label>
+                                          <FontAwesomeIcon fill="#2f3f89" glyphName="KEY" layoutX="29.0" layoutY="44.0" size="3em" />
+                                          <Label layoutX="548.0" layoutY="22.0" text="Date:">
+                                             <font>
+                                                <Font name="Tahoma" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lbDate" layoutX="594.0" layoutY="21.0" prefHeight="21.0" prefWidth="120.0">
+                                             <font>
+                                                <Font name="Arial" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Button fx:id="btnCancelCheckout" layoutX="56.0" layoutY="466.0" mnemonicParsing="false" onAction="#cancelCheckout" prefHeight="40.0" prefWidth="110.0" styleClass="delete-btn" text="Cancel" />
+                                          <Button fx:id="btnPay" layoutX="264.0" layoutY="466.0" mnemonicParsing="false" onAction="#pay" prefHeight="40.0" prefWidth="110.0" styleClass="check-in-btn" text="Pay" />
+                                          <TableView fx:id="tableViewCheckout" layoutX="14.0" layoutY="60.0" prefHeight="320.0" prefWidth="400.0">
+                                            <columns>
+                                              <TableColumn fx:id="colParticular" prefWidth="100.0" text="Room Type" />
+                                              <TableColumn fx:id="colDay" prefWidth="100.0" text="Days" />
+                                                <TableColumn fx:id="colCheckoutPrice" prefWidth="100.0" text="Price" />
+                                                <TableColumn fx:id="colAmount" prefWidth="99.0" text="Amount" />
+                                            </columns>
+                                          </TableView>
+                                          <Label layoutX="264.0" layoutY="22.0" text="Customer:">
+                                             <font>
+                                                <Font name="Tahoma" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lbCustomerCheckoutId" layoutX="344.0" layoutY="21.0" prefHeight="21.0" prefWidth="120.0">
+                                             <font>
+                                                <Font name="Arial" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="208.0" layoutY="415.0" text="Total Room:">
+                                             <font>
+                                                <Font name="Tahoma" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lbRoomFee" layoutX="299.0" layoutY="414.0" prefHeight="21.0" prefWidth="120.0">
+                                             <font>
+                                                <Font name="Arial" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TableView fx:id="tableViewServiceCheckOut" layoutX="436.0" layoutY="60.0" prefHeight="320.0" prefWidth="400.0">
+                                             <columns>
+                                                <TableColumn fx:id="colServiceCheckOut" prefWidth="100.0" text="Service" />
+                                                <TableColumn fx:id="colQuantityCheckOut" prefWidth="100.0" text="Quantity" />
+                                                <TableColumn fx:id="colServicePriceCheckOut" prefWidth="100.0" text="Price" />
+                                                <TableColumn fx:id="colServiceAmount" prefWidth="99.0" text="Amount" />
+                                             </columns>
+                                          </TableView>
+                                          <Label layoutX="623.0" layoutY="415.0" text="Total Service:">
+                                             <font>
+                                                <Font name="Tahoma" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lbServiceFee" layoutX="721.0" layoutY="414.0" prefHeight="21.0" prefWidth="120.0">
+                                             <font>
+                                                <Font name="Arial" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="630.0" layoutY="477.0" text="Total:">
+                                             <font>
+                                                <Font name="Tahoma" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lbTotalAmount" layoutX="721.0" layoutY="476.0" prefHeight="21.0" prefWidth="120.0">
+                                             <font>
+                                                <Font name="Arial" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="419.0" layoutY="477.0" text="Discount:">
+                                             <font>
+                                                <Font name="Tahoma" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lbDiscount" layoutX="488.0" layoutY="476.0" prefHeight="21.0" prefWidth="35.0">
+                                             <font>
+                                                <Font name="Arial" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="523.0" layoutY="473.0" text="\%">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="bookingsForm" layoutX="10.0" layoutY="10.0" prefHeight="550.0" prefWidth="885.0" visible="false" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <AnchorPane layoutX="14.0" layoutY="40.0" prefHeight="520.0" prefWidth="250.0" stylesheets="@../css/dashboard.css">
+                                       <styleClass>
+                                          <String fx:value="shadow" />
+                                          <String fx:value="white-bg" />
+                                       </styleClass>
+                                       <children>
+                                          <Button fx:id="btnOrder" layoutX="70.0" layoutY="235.0" mnemonicParsing="false" onAction="#order" prefHeight="50.0" prefWidth="110.0" styleClass="add-btn" text="Order" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="281.0" layoutY="40.0" prefHeight="520.0" prefWidth="590.0" stylesheets="@../css/dashboard.css">
+                                       <styleClass>
+                                          <String fx:value="shadow" />
+                                          <String fx:value="white-bg" />
+                                       </styleClass>
+                                       <children>
+                                          <TableView fx:id="tableViewBookings" layoutX="10.0" layoutY="46.0" onMouseClicked="#selectBooking" prefHeight="460.0" prefWidth="570.0">
+                                             <columns>
+                                                <TableColumn fx:id="colRoomId1" prefWidth="114.0" text="Room Id" />
+                                                <TableColumn fx:id="colCustomerIdBooking" prefWidth="114.0" text="Customer Id" />
+                                                <TableColumn fx:id="colCheckIn" prefWidth="114.0" text="Check-in Date" />
+                                                <TableColumn fx:id="colCheckOut" prefWidth="114.0" text="Check-out Date" />
+                                                <TableColumn fx:id="colStatus" prefWidth="113.0" text="Status" />
+                                             </columns>
+                                          </TableView>
+                                          <TextField fx:id="txtRoomSearch1" layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="235.0" promptText="Search" styleClass="search" />
+                                          <FontAwesomeIcon fill="#2f3f89" glyphName="SEARCH" layoutX="20.0" layoutY="31.0" size="1.5em" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="servicesForm" prefHeight="550.0" prefWidth="885.0" visible="false">
+                                       <children>
+                                          <AnchorPane layoutX="14.0" layoutY="40.0" prefHeight="520.0" prefWidth="250.0" stylesheets="@../css/dashboard.css">
+                                             <styleClass>
+                                                <String fx:value="shadow" />
+                                                <String fx:value="white-bg" />
+                                             </styleClass>
+                                             <children>
+                                                <Button fx:id="btnCancelOrder" layoutX="70.0" layoutY="419.0" mnemonicParsing="false" onAction="#cancelOrder" prefHeight="50.0" prefWidth="110.0" styleClass="delete-btn" text="Cancel" />
+                                                <Button fx:id="btnAddOrder" layoutX="70.0" layoutY="274.0" mnemonicParsing="false" onAction="#addOrder" prefHeight="50.0" prefWidth="110.0" styleClass="add-btn" text="Add" />
+                                                <Label layoutX="20.0" layoutY="56.0" text="Room #:" AnchorPane.leftAnchor="15.0">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="lbRoomNumberOrder" layoutX="84.0" layoutY="56.0">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="17.0" layoutY="101.0" text="Services: " AnchorPane.leftAnchor="15.0">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <ComboBox fx:id="cbBoxServices" layoutX="85.0" layoutY="96.0" onAction="#serviceName" prefHeight="30.0" prefWidth="140.0" />
+                                                <Label layoutX="12.0" layoutY="151.0" text="Quantity:">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="txtQuantity" layoutX="85.0" layoutY="146.0" prefHeight="30.0" prefWidth="140.0" styleClass="textfield" />
+                                                <Label layoutX="12.0" layoutY="202.0" text="Price:" AnchorPane.leftAnchor="35.0">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="txtPriceOrder" layoutX="85.0" layoutY="197.0" prefHeight="30.0" prefWidth="140.0" styleClass="textfield" />
+                                                <Button fx:id="btnAddOrder1" layoutX="70.0" layoutY="346.0" mnemonicParsing="false" onAction="#clearOrder" prefHeight="50.0" prefWidth="110.0" styleClass="clear-btn" text="Clear" />
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="281.0" layoutY="40.0" prefHeight="520.0" prefWidth="590.0" stylesheets="@../css/dashboard.css">
+                                             <styleClass>
+                                                <String fx:value="shadow" />
+                                                <String fx:value="white-bg" />
+                                             </styleClass>
+                                             <children>
+                                                <TextField fx:id="txtRoomSearch11" layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="235.0" promptText="Search" styleClass="search" />
+                                                <FontAwesomeIcon fill="#2f3f89" glyphName="SEARCH" layoutX="20.0" layoutY="31.0" size="1.5em" />
+                                                <TableView fx:id="tableViewServices" layoutX="10.0" layoutY="46.0" onMouseClicked="#selectBooking" prefHeight="460.0" prefWidth="570.0">
+                                                   <columns>
+                                                      <TableColumn fx:id="colBookingId" prefWidth="190.0" text="Booking Id" />
+                                                      <TableColumn fx:id="colOrderId" prefWidth="190.0" text="Service Id" />
+                                                      <TableColumn fx:id="colOrderQuantity" prefWidth="189.0" text="Quantity" />
+                                                   </columns>
+                                                </TableView>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="serviceForm" layoutX="10.0" layoutY="10.0" prefHeight="550.0" prefWidth="885.0" visible="false" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <AnchorPane layoutX="14.0" layoutY="40.0" prefHeight="520.0" prefWidth="250.0" stylesheets="@../css/dashboard.css">
+                                       <styleClass>
+                                          <String fx:value="shadow" />
+                                          <String fx:value="white-bg" />
+                                       </styleClass>
+                                       <children>
+                                          <TextField fx:id="txtServiceName" layoutX="90.0" layoutY="103.0" prefHeight="30.0" prefWidth="150.0" styleClass="textfield" />
+                                          <Label layoutX="8.0" layoutY="110.0" text="Service Name:" AnchorPane.leftAnchor="8.0" />
+                                          <TextField fx:id="txtServicePrice" layoutX="92.0" layoutY="148.0" prefHeight="30.0" prefWidth="150.0" styleClass="textfield" />
+                                          <Label layoutX="48.0" layoutY="153.0" text="Price:" AnchorPane.leftAnchor="50.0">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Button fx:id="btnAddService" layoutX="24.0" layoutY="320.0" mnemonicParsing="false" onAction="#addService" prefHeight="40.0" prefWidth="80.0" styleClass="add-btn" text="Add" />
+                                          <Button fx:id="btnUpdateService" layoutX="147.0" layoutY="320.0" mnemonicParsing="false" onAction="#updateService" prefHeight="40.0" prefWidth="80.0" styleClass="update-btn" text="Update" />
+                                          <Button fx:id="btnClearService" layoutX="24.0" layoutY="387.0" mnemonicParsing="false" onAction="#clearService" prefHeight="40.0" prefWidth="80.0" styleClass="clear-btn" text="Clear" />
+                                          <Button fx:id="btnDeleteService" layoutX="147.0" layoutY="387.0" mnemonicParsing="false" onAction="#deleteService" prefHeight="40.0" prefWidth="80.0" styleClass="delete-btn" text="Delete" />
+                                          <Label layoutX="68.0" layoutY="70.0" text="Id:" AnchorPane.leftAnchor="67.0">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lbServiceId" layoutX="91.0" layoutY="71.0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="281.0" layoutY="40.0" prefHeight="520.0" prefWidth="590.0" stylesheets="@../css/dashboard.css">
+                                       <styleClass>
+                                          <String fx:value="shadow" />
+                                          <String fx:value="white-bg" />
+                                       </styleClass>
+                                       <children>
+                                          <TableView fx:id="tableViewService" layoutX="10.0" layoutY="46.0" onMouseClicked="#selectService" prefHeight="460.0" prefWidth="570.0">
+                                             <columns>
+                                                <TableColumn fx:id="colServiceId" prefWidth="190.0" text="Service Id" />
+                                                <TableColumn fx:id="colServiceName" prefWidth="190.0" text="Service Name" />
+                                                <TableColumn fx:id="colServicePrice" prefWidth="189.0" text="Service Price ($)" />
+                                             </columns>
+                                          </TableView>
+                                          <TextField fx:id="txtRoomSearch2" layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="235.0" promptText="Search" styleClass="search" />
+                                          <FontAwesomeIcon fill="#2f3f89" glyphName="SEARCH" layoutX="20.0" layoutY="31.0" size="1.5em" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="invoicesForm" layoutX="10.0" layoutY="10.0" prefHeight="550.0" prefWidth="885.0" visible="false" AnchorPane.leftAnchor="10.0">
+                                 <children>
+                                    <AnchorPane layoutX="6.0" layoutY="10.0" prefHeight="570.0" prefWidth="865.0" stylesheets="@../css/dashboard.css" AnchorPane.leftAnchor="0.0">
+                                       <styleClass>
+                                          <String fx:value="shadow" />
+                                          <String fx:value="white-bg" />
+                                       </styleClass>
+                                       <children>
+                                          <TableView fx:id="tableViewInvoice" layoutY="-10.0" onMouseClicked="#selectService" prefHeight="580.0" prefWidth="865.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-10.0">
+                                             <columns>
+                                                <TableColumn fx:id="colInvoiceId" prefWidth="124.0" text="Invoice Id" />
+                                                <TableColumn fx:id="colCustomerInvoiceId" prefWidth="124.0" text="Customer Id" />
+                                                <TableColumn fx:id="colTotalRoom" prefWidth="124.0" text="Total Room Fee" />
+                                                <TableColumn fx:id="colTotalService" prefWidth="124.0" text="Total Service Fee" />
+                                                <TableColumn fx:id="colDiscount" prefWidth="124.0" text="Discount" />
+                                                <TableColumn fx:id="colTotal" prefWidth="124.0" text="Total Amount" />
+                                                <TableColumn fx:id="colInvoiceDate" prefWidth="120.0" text="Invoice Date" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                                    </children>
+                                </AnchorPane>
+                            </center>
+                        </BorderPane>
+                    </children>
+                </AnchorPane>
+            </children>
+        </StackPane>
+    </children>
+</AnchorPane>
